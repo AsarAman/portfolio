@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.navbar h1 {
+  background-image: linear-gradient(135deg, #9ec5ff, #e1a6f8);
+  -webkit-text-fill-color: transparent;
+  color: var(--secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: .3s all ease;
+}
+.icon:hover{
+  box-shadow: var(--hover-box-shadow);
+}
+.contactIcon{
+  animation: rotate 2.5s linear infinite;
+
+}
+
+@keyframes rotate {
+  0%{
+    transform:  rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+/* .navbarContent {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  flex-direction: column;
+  transition: 3s all ease-in-out;
+  transform: translateX(100rem);
+  
+  
+  background-color: red;
+} */
+
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+.socialIcons li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

@@ -1,0 +1,121 @@
+.portfolioTitle {
+  background-image: linear-gradient(135deg, #9ec5ff, #e1a6f8);
+  -webkit-text-fill-color: transparent;
+  color: var(--secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: capitalize;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
+}
+.singleProject {
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.singleProject:hover{
+  box-shadow: var(--hover-box-shadow);
+}
+
+.imageWrapper {
+  width: 100%;
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  height: 256px;
+}
+
+.projectInfo {
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+.viewProject,
+.projectTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+.projectTitle h2 {
+  background-image: linear-gradient(135deg, #9ec5ff, #e1a6f8);
+  -webkit-text-fill-color: transparent;
+  color: var(--secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: capitalize;
+}
+.btn {
+  background-color: transparent;
+  box-shadow: var(--inset-box-shadow);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgba(120, 137, 179, 0.4);
+  color: rgba(120, 137, 179, 0.4);
+  transition: 0.3s all ease;
+}
+.singleProject:hover .icon {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+.viewProject .view {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 885px) {
+  .imageWrapper {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .imageWrapper {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+   .imageWrapper {
+     height: 220px;
+   }
+ }
+
+@media screen and (max-width: 410px) {
+  .imageWrapper {
+    height: 170px;
+  }
+}
+
+

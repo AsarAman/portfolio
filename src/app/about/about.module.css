@@ -1,0 +1,122 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto auto auto ;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .firstChild{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .thirdChild{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .secondChild{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    background-image: url('../../../public/3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+   
+  
+  }
+  .lastChild{
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+ 
+  
+.gridItem {
+    padding: 2.5rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    width: 100%;
+    height: 100%;
+  }
+  .gridItem:hover{
+    box-shadow: var(--hover-box-shadow);
+    
+
+  }
+  .gridItem h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+  .gridItem h2{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .gridItem p{
+    font-size: 1.25rem;
+  }
+  .span{
+    background-image: linear-gradient(135deg, #9ec5ff, #e1a6f8);
+    -webkit-text-fill-color: transparent;
+    color: var(--secondary-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-bottom: 2px solid #e1a6f8;
+    
+    
+
+  }
+
+  .experience{
+    display: grid;
+    align-items: center;
+    
+    width: 100%;
+    gap: 20px;
+    
+    grid-template-columns: auto 1fr auto;
+  }
+  .line{
+    width: 100%;
+    background-color: #85a4c4;
+    height: 1px;
+    opacity: .5;
+
+  }
+
+  @media screen and (max-width:980px) {
+    .grid{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .firstChild,.lastChild,.thirdChild{
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    .secondChild{
+      display: none;
+      
+    }
+    
+    
+  } 
+
+  @media screen and (max-width: 572px) {
+    .gridItem {
+      padding: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 462px) {
+    .gridItem h1 {
+      font-size: 2rem;
+    }
+  }
