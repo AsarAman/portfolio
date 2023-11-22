@@ -103,6 +103,28 @@ function Portfolio() {
               </div>
             </div>
           </div>
+          <div className={styles.singleProject}>
+            <div className={styles.imageWrapper}>
+              <Image
+                width={1105}
+                height={771}
+                src="/port-5.png"
+                alt="portfolio-project-cover-image"
+              />
+            </div>
+            <div className={styles.projectInfo}>
+              <div className={styles.projectTitle}>
+                <h2>Search GitHub Users</h2>
+                <p className={styles.btn}>Web Dev</p>
+              </div>
+              <div className={styles.viewProject}>
+                <a className={styles.view} href="https://search-github-users-flame.vercel.app/login">View project</a>
+                <a href="https://search-github-users-flame.vercel.app/login" className={styles.icon}>
+                  <ArrowUpRight/>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
