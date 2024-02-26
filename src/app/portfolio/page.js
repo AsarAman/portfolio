@@ -16,8 +16,11 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                width={1837}
-                height={771}
+                // width={1837}
+                // height={771}
+                fill={true}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 700px"
                 src="/port-1.png"
                 alt="portfolio-project-cover-image"
               />
@@ -39,8 +42,11 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                width={1682}
-                height={771}
+                // width={1682}
+                // height={771}
+                fill={true}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 700px"
                 src="/port-2.png"
                 alt="portfolio-project-cover-image"
               />
@@ -62,8 +68,11 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                width={1105}
-                height={771}
+                // width={1105}
+                // height={771}
+                fill={true}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 700px"
                 src="/port-3.png"
                 alt="portfolio-project-cover-image"
               />
@@ -84,8 +93,11 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                width={1105}
-                height={771}
+                // width={1105}
+                // height={771}
+                fill={true}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 700px"
                 src="/port-4.png"
                 alt="portfolio-project-cover-image"
               />
@@ -106,8 +118,11 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                width={1105}
-                height={771}
+                // width={1105}
+                // height={771}
+                fill={true}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 700px"
                 src="/port-5.png"
                 alt="portfolio-project-cover-image"
               />
@@ -120,6 +135,31 @@ function Portfolio() {
               <div className={styles.viewProject}>
                 <a className={styles.view} href="https://search-github-users-flame.vercel.app/login">View project</a>
                 <a href="https://search-github-users-flame.vercel.app/login" className={styles.icon}>
+                  <ArrowUpRight/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className={styles.singleProject}>
+            <div className={styles.imageWrapper}>
+              <Image
+                // width={1105}
+                // height={771}
+                fill={true}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 700px"
+                src="/port-6.png"
+                alt="portfolio-project-cover-image"
+              />
+            </div>
+            <div className={styles.projectInfo}>
+              <div className={styles.projectTitle}>
+                <h2>Notes App</h2>
+                <p className={styles.btn}>Web Dev</p>
+              </div>
+              <div className={styles.viewProject}>
+                <a className={styles.view} href='https://notes-app-mern-qrh0.onrender.com/notes'>View project</a>
+                <a href="https://notes-app-mern-qrh0.onrender.com/notes" className={styles.icon}>
                   <ArrowUpRight/>
                 </a>
               </div>
