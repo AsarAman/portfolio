@@ -108,8 +108,8 @@ function Portfolio() {
                 <p className={styles.btn}>Web Dev</p>
               </div>
               <div className={styles.viewProject}>
-                <a className={styles.view} href="https://jobify-3cgo.onrender.com/landing">View project</a>
-                <a href="https://jobify-3cgo.onrender.com/landing" className={styles.icon}>
+                <a className={styles.view} href="https://jobify-p0xo.onrender.com/landing">View project</a>
+                <a href="https://jobify-p0xo.onrender.com/landing" className={styles.icon}>
                   <ArrowUpRight/>
                 </a>
               </div>
