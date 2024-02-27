@@ -2,9 +2,9 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./contactpage.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-
- const metadata = {
+const metadata = {
   title: "Asar Portfolio/Contact",
   description: "Syed Asar Aman Portfolio website",
 };
@@ -26,6 +26,9 @@ function ContactPage() {
       number: number,
       message: message,
     };
+    if (!name || !email || !number || !message) {
+      return setContactMessage("Please provide the missing fields first!");
+    }
 
     if (name && email && number && message) {
       try {
@@ -55,8 +58,8 @@ function ContactPage() {
   });
   return (
     <section className="section-center">
-      <div className={styles.contactPage}>
-        <div className={styles.contactInfo}>
+      <motion.div initial={{opacity:0, scale:0.5}} animate={{opacity:1, scale:1}} className={styles.contactPage}>
+        <div  className={styles.contactInfo}>
           <div className={styles.avatar}>
             <Image
               src="/port-avatar.png"
@@ -80,13 +83,13 @@ function ContactPage() {
             <p>+923169920767</p>
           </div>
         </div>
-        <div className={styles.contactForm}>
+        <div  className={styles.contactForm}>
           <input ref={nameRef} type="text" required placeholder="Your Name" />
           <input type="email" ref={emailRef} required placeholder="Email" />
           <input type="number" required ref={noRef} placeholder="Phone" />
           <textarea rows="6" ref={msgRef} placeholder="Message" />
           {contactMessage && (
-            <p className={styles.contactMessage}>{contactMessage}</p>
+            <motion.p initial={{x:'-500px', opacity:0}} animate={{opacity:1, x:0}} className={styles.contactMessage}>{contactMessage}</motion.p>
           )}
           <button
             onClick={handleRequest}
@@ -96,7 +99,7 @@ function ContactPage() {
             Submit
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,25 +1,31 @@
+"use client";
 import {
-  
   Zap,
   ArrowUpRight,
   User2,
   Laptop,
   Mail,
-  
   Figma,
   Sparkles,
   Rocket,
   Hand,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 import styles from "./page.module.css";
 import Link from "next/link";
 
-
 function Home() {
   return (
     <section className="section-center">
-      <div className={styles.grid} id="grid">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{duration: .5}}
+        
+        className={styles.grid}
+        id="grid"
+      >
         <Link
           href="/portfolio"
           className={`${styles.gridItem} ${styles.firstChild}`}
@@ -34,6 +40,7 @@ function Home() {
             </p>
           </div>
         </Link>
+
         <Link
           href="/resume"
           className={`${styles.gridItem} ${styles.secondChild}`}
@@ -79,7 +86,7 @@ function Home() {
           </div>
         </div>
         <div className={styles.mailItem}>
-          <div className={styles.mail}>
+          <a href="mailto:asaraman278@gmail.com" className={styles.mail}>
             <div>
               <Mail size={64} color="#e1a6f8" />
               <p>MAIL</p>
@@ -88,9 +95,12 @@ function Home() {
             <p className={styles.icon}>
               <ArrowUpRight />
             </p>
-          </div>
+          </a>
         </div>
-        <Link href="/contact"  className={`${styles.gridItem} ${styles.lastChild}`}>
+        <Link
+          href="/contact"
+          className={`${styles.gridItem} ${styles.lastChild}`}
+        >
           <Rocket size={40} color="#e1a6f8" />
           <h2 className={styles.contact}>Get in touch now</h2>
           <div className={styles.moreInfo}>
@@ -100,7 +110,7 @@ function Home() {
             </p>
           </div>
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 }

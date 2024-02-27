@@ -1,8 +1,9 @@
+'use client'
 import { BadgeCheck, Hand, Smile } from "lucide-react";
 import styles from "./about.module.css";
 import Socials from "@/components/socials/socials";
-
-export const metadata = {
+import { motion } from "framer-motion";
+const metadata = {
   title: "Asar Portfolio/About",
   description: "Syed Asar Aman Portfolio website",
 };
@@ -10,7 +11,7 @@ export const metadata = {
 function About() {
   return (
     <section className="section-center">
-      <div className={styles.grid}>
+      <motion.div initial={{opacity:0, x:'-500px'}} animate={{opacity:1, x:0}} className={styles.grid}>
         <div className={`${styles.gridItem} ${styles.firstChild}`}>
           <Hand color="#e1a6f8" size={32} />
           <h1>
@@ -45,7 +46,7 @@ function About() {
             <p className={styles.year}>Front-End Dev (2020-2022)</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

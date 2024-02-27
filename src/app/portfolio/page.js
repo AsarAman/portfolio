@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import styles from "./portfolio.module.css";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
-export const metadata = {
+
+const metadata = {
   title: "Asar Portfolio/Portfolio",
   description: "Syed Asar Aman Portfolio website",
 };
@@ -10,14 +13,20 @@ export const metadata = {
 function Portfolio() {
   return (
     <section className="section-center">
-      <div className={styles.portfolio}>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: "-200px" },
+          visible: { opacity: 1, y: "0px" },
+        }}
+        initial="hidden"
+        animate="visible"
+        className={styles.portfolio}
+      >
         <h1 className={styles.portfolioTitle}>Portfolio</h1>
         <div className={styles.grid}>
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                // width={1837}
-                // height={771}
                 fill={true}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, 700px"
@@ -31,10 +40,18 @@ function Portfolio() {
                 <p className={styles.btn}>Web Dev</p>
               </div>
               <div className={styles.viewProject}>
-                <a className={styles.view} href='https://blog-app-asar.vercel.app/'>View Project</a>
-                
-                <a href='https://blog-app-asar.vercel.app/' className={styles.icon}>
-                  <ArrowUpRight/>
+                <a
+                  className={styles.view}
+                  href="https://blog-app-asar.vercel.app/"
+                >
+                  View Project
+                </a>
+
+                <a
+                  href="https://blog-app-asar.vercel.app/"
+                  className={styles.icon}
+                >
+                  <ArrowUpRight />
                 </a>
               </div>
             </div>
@@ -42,8 +59,6 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                // width={1682}
-                // height={771}
                 fill={true}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, 700px"
@@ -57,10 +72,17 @@ function Portfolio() {
                 <p className={styles.btn}>Web Dev</p>
               </div>
               <div className={styles.viewProject}>
-
-                <a className={styles.view} href="https://ecommerce-app-drab-ten.vercel.app/">View project</a>
-                <a href="https://ecommerce-app-drab-ten.vercel.app/" className={styles.icon}>
-                  <ArrowUpRight/>
+                <a
+                  className={styles.view}
+                  href="https://ecommerce-app-drab-ten.vercel.app/"
+                >
+                  View project
+                </a>
+                <a
+                  href="https://ecommerce-app-drab-ten.vercel.app/"
+                  className={styles.icon}
+                >
+                  <ArrowUpRight />
                 </a>
               </div>
             </div>
@@ -68,8 +90,6 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                // width={1105}
-                // height={771}
                 fill={true}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, 700px"
@@ -83,9 +103,17 @@ function Portfolio() {
                 <p className={styles.btn}>Web Dev</p>
               </div>
               <div className={styles.viewProject}>
-                <a className={styles.view} href="https://photo-enhancement.vercel.app/">View project</a>
-                <a href="https://photo-enhancement.vercel.app/" className={styles.icon}>
-                  <ArrowUpRight/>
+                <a
+                  className={styles.view}
+                  href="https://photo-enhancement.vercel.app/"
+                >
+                  View project
+                </a>
+                <a
+                  href="https://photo-enhancement.vercel.app/"
+                  className={styles.icon}
+                >
+                  <ArrowUpRight />
                 </a>
               </div>
             </div>
@@ -93,8 +121,6 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                // width={1105}
-                // height={771}
                 fill={true}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, 700px"
@@ -108,9 +134,17 @@ function Portfolio() {
                 <p className={styles.btn}>Web Dev</p>
               </div>
               <div className={styles.viewProject}>
-                <a className={styles.view} href="https://jobify-p0xo.onrender.com/landing">View project</a>
-                <a href="https://jobify-p0xo.onrender.com/landing" className={styles.icon}>
-                  <ArrowUpRight/>
+                <a
+                  className={styles.view}
+                  href="https://jobify-p0xo.onrender.com/landing"
+                >
+                  View project
+                </a>
+                <a
+                  href="https://jobify-p0xo.onrender.com/landing"
+                  className={styles.icon}
+                >
+                  <ArrowUpRight />
                 </a>
               </div>
             </div>
@@ -118,8 +152,6 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                // width={1105}
-                // height={771}
                 fill={true}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, 700px"
@@ -133,9 +165,17 @@ function Portfolio() {
                 <p className={styles.btn}>Web Dev</p>
               </div>
               <div className={styles.viewProject}>
-                <a className={styles.view} href="https://search-github-users-flame.vercel.app/login">View project</a>
-                <a href="https://search-github-users-flame.vercel.app/login" className={styles.icon}>
-                  <ArrowUpRight/>
+                <a
+                  className={styles.view}
+                  href="https://search-github-users-flame.vercel.app/login"
+                >
+                  View project
+                </a>
+                <a
+                  href="https://search-github-users-flame.vercel.app/login"
+                  className={styles.icon}
+                >
+                  <ArrowUpRight />
                 </a>
               </div>
             </div>
@@ -143,8 +183,6 @@ function Portfolio() {
           <div className={styles.singleProject}>
             <div className={styles.imageWrapper}>
               <Image
-                // width={1105}
-                // height={771}
                 fill={true}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, 700px"
@@ -158,15 +196,23 @@ function Portfolio() {
                 <p className={styles.btn}>Web Dev</p>
               </div>
               <div className={styles.viewProject}>
-                <a className={styles.view} href='https://notes-app-mern-qrh0.onrender.com/notes'>View project</a>
-                <a href="https://notes-app-mern-qrh0.onrender.com/notes" className={styles.icon}>
-                  <ArrowUpRight/>
+                <a
+                  className={styles.view}
+                  href="https://notes-app-mern-qrh0.onrender.com/notes"
+                >
+                  View project
+                </a>
+                <a
+                  href="https://notes-app-mern-qrh0.onrender.com/notes"
+                  className={styles.icon}
+                >
+                  <ArrowUpRight />
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
