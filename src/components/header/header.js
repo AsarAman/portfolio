@@ -9,7 +9,7 @@ function Header() {
     <header className="section-center">
       <div className={styles.navbar}>
         <Logo/>
-        <Link href='/contact' className={styles.icon}>
+        <Link aria-label="Contact Me Url" href='/contact' className={styles.icon}>
           <Contact color="#e1a6f8" className={styles.contactIcon} size={32} />
         </Link>
       </div>
