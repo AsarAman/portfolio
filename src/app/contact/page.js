@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import styles from "./contactpage.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/pagetransition/pagetransition";
 
 const metadata = {
   title: "Asar Portfolio/Contact",
@@ -57,8 +58,10 @@ function ContactPage() {
     }
   });
   return (
+    <>
+    <PageTransition/>
     <section className="section-center">
-      <motion.div initial={{opacity:0, scale:0.5}} animate={{opacity:1, scale:1}} className={styles.contactPage}>
+      <div  className={styles.contactPage}>
         <div  className={styles.contactInfo}>
           <div className={styles.avatar}>
             <Image
@@ -99,8 +102,9 @@ function ContactPage() {
             Submit
           </button>
         </div>
-      </motion.div>
+      </div>
     </section>
+    </>
   );
 }
 

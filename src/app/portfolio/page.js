@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import styles from "./portfolio.module.css";
-import { ArrowUpRight } from "lucide-react";
+import { GithubIcon } from "lucide-react";
 import { motion } from "framer-motion";
-
+import PageTransition from "@/components/pagetransition/pagetransition";
 
 const metadata = {
   title: "Asar Portfolio/Portfolio",
@@ -12,208 +12,220 @@ const metadata = {
 
 function Portfolio() {
   return (
-    <section className="section-center">
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: "-200px" },
-          visible: { opacity: 1, y: "0px" },
-        }}
-        initial="hidden"
-        animate="visible"
-        className={styles.portfolio}
-      >
-        <h1 className={styles.portfolioTitle}>Portfolio</h1>
-        <div className={styles.grid}>
-          <div className={styles.singleProject}>
-            <div className={styles.imageWrapper}>
-              <Image
-                fill={true}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, 700px"
-                src="/port-1.png"
-                alt="portfolio-project-cover-image"
-              />
-            </div>
-            <div className={styles.projectInfo}>
-              <div className={styles.projectTitle}>
-                <h2>Blog WEbsite</h2>
-                <p className={styles.btn}>Web Dev</p>
-              </div>
-              <div className={styles.viewProject}>
-                <a
-                  className={styles.view}
-                  href="https://blog-app-asar.vercel.app/"
-                >
-                  View Project
-                </a>
+    <>
+      <PageTransition />
 
-                <a
-                  href="https://blog-app-asar.vercel.app/"
-                  className={styles.icon}
-                >
-                  <ArrowUpRight />
-                </a>
+      <section className="section-center">
+        <div className={styles.portfolio}>
+          <h1 className={styles.portfolioTitle}>
+            {" "}
+            <span>/</span> Explore My Projects
+          </h1>
+          <div className={styles.grid}>
+            <div className={styles.singleProject}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  width={450}
+                  height={450}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  src="/blog-final.png"
+                  alt="portfolio-project-cover-image"
+                />
+              </div>
+              <div className={styles.projectInfo}>
+                <h3>Web Dev</h3>
+                <h2>Blog Website</h2>
+                <p>
+                  A personl blog website created using latest technologies like
+                  NextJS with unique design and it is mobile responsive as well.
+                </p>
+                <div className={styles.btns}>
+                  <a
+                    className={styles.view}
+                    href="https://blog-app-asar.vercel.app/"
+                  >
+                    View Project
+                  </a>
+                  <a href="https://github.com/AsarAman/blog-app-asar">
+                    {" "}
+                    <GithubIcon color="#3c83f6" size={48} />{" "}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.singleProject}>
-            <div className={styles.imageWrapper}>
-              <Image
-                fill={true}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, 700px"
-                src="/port-2.png"
-                alt="portfolio-project-cover-image"
-              />
-            </div>
-            <div className={styles.projectInfo}>
-              <div className={styles.projectTitle}>
+            <div className={styles.singleProject}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src="/ecom-image.png"
+                  width={450}
+                  height={450}
+                  alt="portfolio-project-cover-image"
+                />
+              </div>
+              <div className={styles.projectInfo}>
+                <h3>Web Dev</h3>
                 <h2>Ecommerce Website</h2>
-                <p className={styles.btn}>Web Dev</p>
-              </div>
-              <div className={styles.viewProject}>
-                <a
-                  className={styles.view}
-                  href="https://ecommerce-app-drab-ten.vercel.app/"
-                >
-                  View project
-                </a>
-                <a
-                  href="https://ecommerce-app-drab-ten.vercel.app/"
-                  className={styles.icon}
-                >
-                  <ArrowUpRight />
-                </a>
+                <p>
+                  Ecommerce website created using latest technologies like Mern
+                  Stack with advanced filtering and searching functionalities
+                  with quite unique design.
+                </p>
+                <div className={styles.btns}>
+                  <a
+                    className={styles.view}
+                    href="https://ecommerce-app-drab-ten.vercel.app/"
+                  >
+                    View Project
+                  </a>
+                  <a href="https://github.com/AsarAman/ecommerce-app">
+                    {" "}
+                    <GithubIcon color="#3c83f6" size={48} />{" "}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.singleProject}>
-            <div className={styles.imageWrapper}>
-              <Image
-                fill={true}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, 700px"
-                src="/port-3.png"
-                alt="portfolio-project-cover-image"
-              />
-            </div>
-            <div className={styles.projectInfo}>
-              <div className={styles.projectTitle}>
+            <div className={styles.singleProject}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  width={450}
+                  height={450}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src="/restore-final.png"
+                  alt="portfolio-project-cover-image"
+                />
+              </div>
+              <div className={styles.projectInfo}>
+                <h3>Web Dev</h3>
                 <h2>Restore Photos</h2>
-                <p className={styles.btn}>Web Dev</p>
-              </div>
-              <div className={styles.viewProject}>
-                <a
-                  className={styles.view}
-                  href="https://photo-enhancement.vercel.app/"
-                >
-                  View project
-                </a>
-                <a
-                  href="https://photo-enhancement.vercel.app/"
-                  className={styles.icon}
-                >
-                  <ArrowUpRight />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className={styles.singleProject}>
-            <div className={styles.imageWrapper}>
-              <Image
-                fill={true}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, 700px"
-                src="/port-4.png"
-                alt="portfolio-project-cover-image"
-              />
-            </div>
-            <div className={styles.projectInfo}>
-              <div className={styles.projectTitle}>
-                <h2>Jobify</h2>
-                <p className={styles.btn}>Web Dev</p>
-              </div>
-              <div className={styles.viewProject}>
-                <a
-                  className={styles.view}
-                  href="https://jobify-p0xo.onrender.com/landing"
-                >
-                  View project
-                </a>
-                <a
-                  href="https://jobify-p0xo.onrender.com/landing"
-                  className={styles.icon}
-                >
-                  <ArrowUpRight />
-                </a>
+                <p>
+                  An AI website created with latest technologies like NextJS and
+                  it uses advanced AI models where users can enhance their old
+                  photos.
+                </p>
+                <div className={styles.btns}>
+                  <a
+                    href="https://photo-enhancement.vercel.app/"
+                    className={styles.view}
+                  >
+                    View Project
+                  </a>
+                  <a href="https://github.com/AsarAman/photo-restore">
+                    {" "}
+                    <GithubIcon color="#3c83f6" size={48} />{" "}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.singleProject}>
-            <div className={styles.imageWrapper}>
-              <Image
-                fill={true}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, 700px"
-                src="/port-5.png"
-                alt="portfolio-project-cover-image"
-              />
-            </div>
-            <div className={styles.projectInfo}>
-              <div className={styles.projectTitle}>
-                <h2>Search GitHub Users</h2>
-                <p className={styles.btn}>Web Dev</p>
+            <div className={styles.singleProject}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  width={450}
+                  height={450}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src="/jobify.png"
+                  alt="portfolio-project-cover-image"
+                />
               </div>
-              <div className={styles.viewProject}>
-                <a
-                  className={styles.view}
-                  href="https://search-github-users-flame.vercel.app/login"
-                >
-                  View project
-                </a>
-                <a
-                  href="https://search-github-users-flame.vercel.app/login"
-                  className={styles.icon}
-                >
-                  <ArrowUpRight />
-                </a>
+              <div className={styles.projectInfo}>
+                <h3>Web Dev</h3>
+                <h2>Job Tracking Website</h2>
+                <p>
+                  A job tracking website created with latest technologies like
+                  Mern Stack where users can manage all their jobs efficiently.
+                  It also has advanced filtering and searching functionalities
+                  and it is mobile responsive as well.
+                </p>
+                <div className={styles.btns}>
+                  <a
+                    href="https://jobify-p0xo.onrender.com/landing"
+                    className={styles.view}
+                  >
+                    View Project
+                  </a>
+                  <a href="https://github.com/AsarAman/jobify">
+                    {" "}
+                    <GithubIcon color="#3c83f6" size={48} />{" "}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.singleProject}>
-            <div className={styles.imageWrapper}>
-              <Image
-                fill={true}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, 700px"
-                src="/port-6.png"
-                alt="portfolio-project-cover-image"
-              />
+            <div className={styles.singleProject}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  width={450}
+                  height={450}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src="/Search-Github.png"
+                  alt="portfolio-project-cover-image"
+                />
+              </div>
+              <div className={styles.projectInfo}>
+                <h3>Web Dev</h3>
+                <h2>Search Github User</h2>
+                <p>
+                  A website which is created with ReactJS where users can Search
+                  different Github users.
+                </p>
+                <div className={styles.btns}>
+                  <a
+                    href="https://search-github-users-flame.vercel.app/"
+                    className={styles.view}
+                  >
+                    View Project
+                  </a>
+                  <a href="https://github.com/AsarAman/search-github-users">
+                    {" "}
+                    <GithubIcon color="#3c83f6" size={48} />{" "}
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className={styles.projectInfo}>
-              <div className={styles.projectTitle}>
+            <div className={styles.singleProject}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  width={450}
+                  height={450}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src="/notes.png"
+                  alt="portfolio-project-cover-image"
+                />
+              </div>
+              <div className={styles.projectInfo}>
+                <h3>Web Dev</h3>
                 <h2>Notes App</h2>
-                <p className={styles.btn}>Web Dev</p>
-              </div>
-              <div className={styles.viewProject}>
-                <a
-                  className={styles.view}
-                  href="https://notes-app-mern-qrh0.onrender.com/notes"
-                >
-                  View project
-                </a>
-                <a
-                  href="https://notes-app-mern-qrh0.onrender.com/notes"
-                  className={styles.icon}
-                >
-                  <ArrowUpRight />
-                </a>
+                <p>
+                  A note taking website created with Mern Stack where users can
+                  efficiently manage all their notes. It also has advanced
+                  filtering and searching functionalities.
+                </p>
+                <div className={styles.btns}>
+                  <a
+                    href="https://notes-app-mern-qrh0.onrender.com/notes"
+                    className={styles.view}
+                  >
+                    View Project
+                  </a>
+                  <a
+                    className={styles.github}
+                    href="https://github.com/AsarAman/notes-app-mern"
+                  >
+                    {" "}
+                    <GithubIcon size={48} color="#3c83f6" />{" "}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </motion.div>
-    </section>
+      </section>
+    </>
   );
 }
 

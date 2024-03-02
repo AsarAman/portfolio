@@ -1,18 +1,26 @@
 .portfolioTitle {
-  background-image: linear-gradient(135deg, #9ec5ff, #e1a6f8);
-  -webkit-text-fill-color: transparent;
-  color: var(--secondary-color);
-  -webkit-background-clip: text;
-  background-clip: text;
+  margin: 0 auto;
   text-transform: capitalize;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 5rem;
+  
+  color: var(--foreground);
+  font-weight: 900;
+  text-align: center;
+  margin-top: 2rem;
+
+  letter-spacing: 1.7px;
+}
+.portfolioTitle span {
+  color: var(--primary);
 }
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .singleProject {
   padding: 10px;
@@ -21,22 +29,33 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction: column;
+  padding: 2rem;
+  border: 1.5px solid var(--border-color);
+  height: 100%;
+  gap: 1.5rem;
+
   cursor: pointer;
   transition: 0.3s all ease;
 }
-.singleProject:hover{
-  box-shadow: var(--hover-box-shadow);
+.singleProject:hover {
+  transform: translateY(5px);
 }
 
 .imageWrapper {
-  width: 100%;
+  
+padding: 1rem;
   border-radius: 1.5rem;
-  position: relative;
-  overflow: hidden;
+
+  flex: 1;
   height: 100%;
   box-shadow: var(--box-shadow);
-  height: 256px;
+  border: 1.5px solid var(--border-color);
+
+}
+.imageWrapper img {
+  object-fit: cover;
+  border-radius: 1.5rem;
+ 
 }
 
 .projectInfo {
@@ -44,78 +63,105 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.5rem;
   width: 100%;
+  flex: 1;
 }
-.viewProject,
-.projectTitle {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: flex-start;
+.projectInfo h3 {
+  color: var(--primary);
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  font-weight: 700;
 }
-.projectTitle h2 {
-  background-image: linear-gradient(135deg, #9ec5ff, #e1a6f8);
-  -webkit-text-fill-color: transparent;
-  color: var(--secondary-color);
-  -webkit-background-clip: text;
-  background-clip: text;
+.projectInfo h2 {
+  font-size: 2.6rem;
+  font-weight: bolder;
+  color: var(--foreground);
   text-transform: capitalize;
 }
-.btn {
-  background-color: transparent;
-  box-shadow: var(--inset-box-shadow);
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
+.projectInfo p {
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: normal;
 }
 
-.icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.btns {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 1px solid rgba(120, 137, 179, 0.4);
-  color: rgba(120, 137, 179, 0.4);
-  transition: 0.3s all ease;
+  gap: 1rem;
 }
-.singleProject:hover .icon {
-  border-color: var(--secondary-color);
-  color: var(--secondary-color);
+.view {
+  outline: none;
+  border: none;
+
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  border-radius: 10px;
+
+  transition: 0.3s ease-in-out;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
 }
-.viewProject .view {
-  text-transform: uppercase;
-  color: var(--secondary-color);
+.view:hover {
+  transform: translateY(5px);
 }
 
-@media screen and (max-width: 885px) {
-  .imageWrapper {
-    height: 220px;
+
+
+
+
+
+
+  
+
+
+@media screen and (max-width: 1030px) {
+  .singleProject{
+    flex-direction: column;
   }
+  .imageWrapper{
+    width: 100%;
+  }
+  
 }
 
-@media screen and (max-width: 775px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media screen and (max-width:700px){
+  .projectInfo{
+    display: block;
   }
-  .imageWrapper {
-    height: 250px;
+  .projectInfo p{
+    font-weight: 400;
+    font-size: 1rem;
   }
+ 
+  
 }
 
-@media screen and (max-width: 545px) {
-   .imageWrapper {
-     height: 220px;
-   }
- }
-
-@media screen and (max-width: 410px) {
-  .imageWrapper {
-    height: 170px;
+@media  screen and (max-width: 640px) {
+  .grid{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
+  .singleProject{
+    padding: 1rem 1.5rem;
+  }
+  .portfolioTitle{
+    font-size: 4rem;
+  }
+  
 }
-
-
+@media screen and (max-width: 450px){
+.projectInfo h2{
+  font-size: 2rem;
+}
+.portfolioTitle{
+  font-size: 3rem;
+}
+  
+}

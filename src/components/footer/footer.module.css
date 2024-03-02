@@ -24,25 +24,24 @@
 .navLinks li a {
   color: var(--secondary-color);
   transition: 0.3s all ease;
+  font-size: 0.8rem;
 }
 .navLinks li a:hover {
-  color: rgb(160, 174, 209);
+  color: var(--primary);
 }
 
-@media screen and (max-width:430px)  {
-  .navLinks, .footerNav{
+@media screen and (max-width: 430px) {
+  .navLinks,
+  .footerNav {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-
   }
-  .navLinks{
+  .navLinks {
     margin-left: 0;
     gap: 1rem;
   }
-  .navLinks li{
+  .navLinks li {
     padding: 0;
   }
-  
 }
-

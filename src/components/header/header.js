@@ -1,17 +1,43 @@
 "use client";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
-import Link from "next/link";
 import Logo from "../logo/logo";
 import styles from "./header.module.css";
-import { Github, Linkedin, Settings, Twitter, Contact } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
+
 function Header() {
+  const { theme, setTheme } = useTheme();
+  const [hasMounted, setMounted] = useState(false);
+  console.log("theme", theme);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <header className="section-center">
       <div className={styles.navbar}>
-        <Logo/>
-        <Link aria-label="Contact Me Url" href='/contact' className={styles.icon}>
-          <Contact color="#e1a6f8" className={styles.contactIcon} size={32} />
-        </Link>
+        <Logo />
+
+        <button
+          suppressHydrationWarning
+          className={`${styles.darkToggle} ${
+            hasMounted && theme === "light"
+              ? styles.light
+              : theme === "dark"
+              ? styles.dark
+              : styles.dark
+          }`}
+          
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          {hasMounted && theme && theme === "dark" ? (
+            <Sun suppressHydrationWarning color="blue" />
+          ) : (
+            <Moon suppressHydrationWarning color="white" />
+          )}
+        </button>
       </div>
     </header>
   );
