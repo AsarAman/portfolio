@@ -7,13 +7,14 @@ import styles from "./header.module.css";
 import { Moon, Sun } from "lucide-react";
 
 function Header() {
-  const { theme, setTheme } = useTheme();
+  let { theme, setTheme } = useTheme();
   const [hasMounted, setMounted] = useState(false);
-  console.log("theme", theme);
-
+  
   useEffect(() => {
     setMounted(true);
   }, []);
+
+ 
 
   return (
     <header className="section-center">
@@ -22,14 +23,12 @@ function Header() {
 
         <button
           suppressHydrationWarning
-          className={`${styles.darkToggle} ${
-            hasMounted && theme === "light"
-              ? styles.light
-              : theme === "dark"
-              ? styles.dark
-              : styles.dark
+          className={`${styles.darkToggle} ${ hasMounted && theme === "light"
+          ? styles.light
+          : theme === "dark"
+          ? styles.dark
+          : styles.dark
           }`}
-          
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {hasMounted && theme && theme === "dark" ? (

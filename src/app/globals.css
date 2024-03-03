@@ -1,27 +1,7 @@
-/* :root {
-  --max-width: 1300px;
-  --border-radius: 12px;
- 
 
-  --primary-color: hsl(0, 0%, 100%);
-  --secondary-color: hsl(222.2 84% 4.9%);
-
-  --muted-foreground: hsl(215.4 16.3% 46.9%);
-  --para-color: hsl(210 40% 96.1%);
-
- 
-
-  --box-shadow: 6px 6px 10px rgba(174, 174, 192, 0.4), -6px -6px 10px #fff;
-
-  --hover-box-shadow: 6px 6px 10px rgba(174, 174, 192, 0.7), -6px -6px 10px #fff;
-
-  --border-radius: 16px;
-
-  --inset-box-shadow: inset 6px 6px 10px rgba(174, 174, 192, 0.4),
-    inset -6px -6px 10px #fff;
-} */
 
 :root {
+  --max-width: 1300px;
   --background: hsl(0 0% 100%);
   --foreground: hsl(222.2 84% 4.9%);
   --card: hsl(0 0% 100%);
@@ -63,10 +43,8 @@
   --secondary-foreground: hsl(210 40% 98%);
   --muted: hsl(217.2 32.6% 17.5%);
   --muted-foreground: hsl(215 20.2% 65.1%);
-  --accent: hsl(217.2 32.6% 17.5%);
-  --accent-foreground: hsl(210 40% 98%);
-  --destructive: hsl(0 62.8% 30.6%);
-  --destructive-foreground: 210 40% 98%;
+ 
+  
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
   --ring: 224.3 76.3% 48%;
