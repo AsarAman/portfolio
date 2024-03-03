@@ -127,7 +127,7 @@ function Portfolio() {
                   height={450}
                   priority={true}
                   sizes="(max-width: 768px) 100vw, 700px"
-                  src="/jobify.png"
+                  src="/Jobify.png"
                   alt="portfolio-project-cover-image"
                 />
               </div>
