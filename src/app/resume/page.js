@@ -25,7 +25,7 @@ function Resume() {
             <a
               className={styles.btn}
               download
-              href="full-stack-developer-resume.pdf"
+              href="full-stack-developer-resume.pf"
             >
               Download
             </a>
