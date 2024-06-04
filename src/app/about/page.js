@@ -41,15 +41,15 @@ function About() {
           <h2>Experience</h2>
 
           <div className={styles.experience}>
-            <p>Code-Cue</p>
+            <p>Elm Company (KSA)</p>
             <div className={styles.line}></div>
-            <p className={styles.year}>Full-Stack Dev (2023-2024)</p>
+            <p className={styles.year}>Full-Stack Dev (2019-2023)</p>
           </div>
-          <div className={styles.experience}>
+          {/* <div className={styles.experience}>
             <p>Code-Cue</p>
             <div className={styles.line}></div>
             <p className={styles.year}>Front-End Dev (2021-2023)</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

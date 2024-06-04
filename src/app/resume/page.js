@@ -25,7 +25,7 @@ function Resume() {
             <a
               className={styles.btn}
               download
-              href="full-stack-developer-resume.pf"
+              href="vue-dev.pdf"
             >
               Download
             </a>
@@ -46,7 +46,7 @@ function Resume() {
             <h1>My Education</h1>
             <p>My education is:</p>
             <p className={styles.education}>
-              Bachelor in Software Engineering - 2020/2024
+              Bachelor in Software Engineering - 2015/2019
             </p>
           </div>
           <div className={styles.gridItem}>
