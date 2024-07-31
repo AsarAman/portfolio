@@ -12,6 +12,7 @@ const metadata = {
 
 function About() {
   const router = useRouter()
+  
   return (
     <>
     <PageTransition/>
@@ -45,11 +46,7 @@ function About() {
             <div className={styles.line}></div>
             <p className={styles.year}>Full-Stack Dev (2019-2023)</p>
           </div>
-          {/* <div className={styles.experience}>
-            <p>Code-Cue</p>
-            <div className={styles.line}></div>
-            <p className={styles.year}>Front-End Dev (2021-2023)</p>
-          </div> */}
+         
         </div>
       </div>
     </section>
