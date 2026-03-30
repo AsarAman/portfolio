@@ -46,6 +46,12 @@ function About() {
             <div className={styles.line}></div>
             <p className={styles.year}>Full-Stack Dev (March 2024 - Present)</p>
           </div>
+
+          <div className={styles.experience}>
+            <p>IplexSoft</p>
+            <div className={styles.line}></div>
+            <p className={styles.year}>Full-Stack Dev (March 2024 - Present)</p>
+          </div>
          
         </div>
       </div>

@@ -39,7 +39,7 @@ function Portfolio() {
                 <p>
                   A personl blog website created using latest technologies like
                   NextJS with unique design and it is mobile responsive as well.
-                </p>ewr 
+                </p>
                 <div className={styles.btns}>
                   <a
                     className={styles.view}
