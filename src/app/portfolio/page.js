@@ -39,7 +39,7 @@ function Portfolio() {
                 <p>
                   A personl blog website created using latest technologies like
                   NextJS with unique design and it is mobile responsive as well.
-                </p>
+                </p>ewr 
                 <div className={styles.btns}>
                   <a
                     className={styles.view}
@@ -67,20 +67,18 @@ function Portfolio() {
               </div>
               <div className={styles.projectInfo}>
                 <h3>Web Dev</h3>
-                <h2>Ecommerce Website</h2>
+                <h2>FixMyImage</h2>
                 <p>
-                  Ecommerce website created using latest technologies like Mern
-                  Stack with advanced filtering and searching functionalities
-                  with quite unique design.
+                  Online photo editing website which can help users edit images with ai and manually.
                 </p>
                 <div className={styles.btns}>
                   <a
                     className={styles.view}
-                    href="https://ecommerce-app-drab-ten.vercel.app/"
+                    href="https://fixmyimage.me/"
                   >
                     View Project
                   </a>
-                  <a href="https://github.com/AsarAman/ecommerce-app">
+                  <a href="https://github.com/AsarAman/asar-image-edit">
                     {" "}
                     <GithubIcon color="#3c83f6" size={48} />{" "}
                   </a>
@@ -133,21 +131,18 @@ function Portfolio() {
               </div>
               <div className={styles.projectInfo}>
                 <h3>Web Dev</h3>
-                <h2>Job Tracking Website</h2>
+                <h2>AI Agent Builder</h2>
                 <p>
-                  A job tracking website created with latest technologies like
-                  Mern Stack where users can manage all their jobs efficiently.
-                  It also has advanced filtering and searching functionalities
-                  and it is mobile responsive as well.
+              A web app which lets you build ai agents.
                 </p>
                 <div className={styles.btns}>
                   <a
-                    href="https://jobify-p0xo.onrender.com/landing"
+                    href="https://botbuilder-asar.vercel.app/"
                     className={styles.view}
                   >
                     View Project
                   </a>
-                  <a href="https://github.com/AsarAman/jobify">
+                  <a href="https://github.com/AsarAman/botbuilder">
                     {" "}
                     <GithubIcon color="#3c83f6" size={48} />{" "}
                   </a>
@@ -186,42 +181,7 @@ function Portfolio() {
                 </div>
               </div>
             </div>
-            <div className={styles.singleProject}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  width={450}
-                  height={450}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  src="/notes.png"
-                  alt="portfolio-project-cover-image"
-                />
-              </div>
-              <div className={styles.projectInfo}>
-                <h3>Web Dev</h3>
-                <h2>Notes App</h2>
-                <p>
-                  A note taking website created with Mern Stack where users can
-                  efficiently manage all their notes. It also has advanced
-                  filtering and searching functionalities.
-                </p>
-                <div className={styles.btns}>
-                  <a
-                    href="https://notes-app-mern-qrh0.onrender.com/notes"
-                    className={styles.view}
-                  >
-                    View Project
-                  </a>
-                  <a
-                    className={styles.github}
-                    href="https://github.com/AsarAman/notes-app-mern"
-                  >
-                    {" "}
-                    <GithubIcon size={48} color="#3c83f6" />{" "}
-                  </a>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>

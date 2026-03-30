@@ -46,7 +46,7 @@ function Resume() {
             <h1>My Education</h1>
             <p>My education is:</p>
             <p className={styles.education}>
-              Bachelor in Software Engineering - 2015/2019
+              Bachelor in Software Engineering - 2020/2024
             </p>
           </div>
           <div className={styles.gridItem}>
@@ -57,6 +57,7 @@ function Resume() {
               <ul>
                 <li>HTML & CSS</li>
                 <li>Javascript</li>
+                <li>Python</li>
                 <li>React</li>
                 <li>NextJS</li>
               </ul>

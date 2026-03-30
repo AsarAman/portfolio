@@ -42,9 +42,9 @@ function About() {
           <h2>Experience</h2>
 
           <div className={styles.experience}>
-            <p>Elm Company (KSA)</p>
+            <p>IplexSoft</p>
             <div className={styles.line}></div>
-            <p className={styles.year}>Full-Stack Dev (2019-2023)</p>
+            <p className={styles.year}>Full-Stack Dev (March 2024 - Present)</p>
           </div>
          
         </div>
