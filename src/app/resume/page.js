@@ -25,7 +25,7 @@ function Resume() {
             <a
               className={styles.btn}
               download
-              href="syed-asar-developer-resume.pdf"
+              href="Syed-asar-developer-resume.pdf"
             >
               Download
             </a>
