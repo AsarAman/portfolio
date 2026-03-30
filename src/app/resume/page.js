@@ -25,7 +25,7 @@ function Resume() {
             <a
               className={styles.btn}
               download
-              href="vue-dev.pdf"
+              href="syed-asar-developer-resume.pdf"
             >
               Download
             </a>
